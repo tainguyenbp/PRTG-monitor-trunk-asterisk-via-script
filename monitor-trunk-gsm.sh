@@ -1,6 +1,6 @@
 #!/bin/bash
 serviceIsRunning=false
-value_trunk_gsm=$(/usr/sbin/asterisk -rx "sip show peers" |grep SIP_TRUNK_GSM |awk '{print $6}'| sed 2,2d)
+value_trunk_gsm=$(/usr/sbin/asterisk -rx "sip show peers" | grep "SIP_TRUNK_GSM" |awk '{print $6}'| sed 2,2d)
 
 if [ "$value_trunk_gsm" == OK ]
     then
